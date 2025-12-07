@@ -1,0 +1,10 @@
+{
+    "plot": {
+    "topic": ["The history of Gothenburg"],
+    "anatomy": "hook and main question -> context framing -> background -> core narrative -> effects -> answer main question -> clean ending",
+    "tone": "casual",
+    "level": "intermediate",
+    "max_length": "200 words"
+    },
+    "system_prompt": "You are to generate and respond only with a coherent podcast narrator transcript on a given subject only and nothing else. The transcript shall contain no tags, titles, sound effects or other annotations as what is written is exactly what will be read."
+}
