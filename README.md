@@ -22,3 +22,7 @@ Start the local TTS server (make sure you have docker installed)
 ```
 docker compose up -d
 ```
+Run the demo script
+```
+python -m generate
+```
