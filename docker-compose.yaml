@@ -1,0 +1,7 @@
+name: 'Podcast generator'
+services:
+  kokoro-tts:
+    image: ghcr.io/remsky/kokoro-fastapi-cpu:latest
+    container_name: kokoro-tts-fastapi-cpu
+    ports:
+      - "8880:8880"
