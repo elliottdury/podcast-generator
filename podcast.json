@@ -1,10 +1,59 @@
 {
-    "plot": {
-    "topic": ["How diffusion works in ai image generation, a complete overview of the various models and techniques."],
-    "anatomy": "lesson overview -> context and mental model for analogies -> main concepts -> concept relations -> pros and cons -> summarize -> real world application",
+  "project_title": "micro-saas",
+  "plot": {
+    "topic": "Everything you should know about building and running a micro SaaS",
     "tone": "professional",
-    "level": "beginner->expert",
-    "max_length": "200 words"
+    "level": "expert"
+  },
+  "chapters": [
+    {
+      "chapter_title": "What Micro SaaS Actually Is (and Is Not)",
+      "chapter_summary": "Defines micro SaaS as a capital-efficient, narrow-scope software business optimized for profitability, control, and sustainability rather than venture-scale outcomes.",
+      "include": "bootstrapping vs venture scale, founder leverage, small teams or solo founders, revenue ceilings, lifestyle vs ambition tradeoffs",
+      "avoid": "romanticized indie hacking, overnight success stories, vague entrepreneurship slogans",
+      "length": "500 words",
+      "backreferences": ""
     },
-    "system_prompt": "You are to generate and respond only with a coherent podcast narrator transcript on a given subject only and nothing else. The transcript shall contain no tags, titles, code, sound effects or other annotations as what is written is exactly what will be read."
+    {
+      "chapter_title": "Problem Selection and Market Sharpness",
+      "chapter_summary": "Explains why micro SaaS lives or dies by precise problem selection, focusing on painful, recurring, narrowly scoped problems with clear buyers.",
+      "include": "job-to-be-done framing, willingness to pay, niche markets, B2B bias, frequency and severity of pain",
+      "avoid": "broad consumer ideas, TAM obsession, idea-first thinking",
+      "length": "500 words",
+      "backreferences": "What Micro SaaS Actually Is (and Is Not)"
+    },
+    {
+      "chapter_title": "Product Scope, Simplicity, and Technical Leverage",
+      "chapter_summary": "Covers how successful micro SaaS products deliberately constrain scope while maximizing leverage through automation, APIs, and boring technology.",
+      "include": "single-core feature focus, integration-first products, technical debt triage, build vs buy decisions, maintenance cost awareness",
+      "avoid": "overengineering, premature scalability, novelty-driven tech stacks",
+      "length": "500 words",
+      "backreferences": "Problem Selection and Market Sharpness"
+    },
+    {
+      "chapter_title": "Pricing, Revenue Models, and Cash Discipline",
+      "chapter_summary": "Analyzes pricing as the primary growth lever in micro SaaS, emphasizing simple models, early monetization, and ruthless cash-flow awareness.",
+      "include": "subscription pricing, value-based pricing, annual plans, churn math, runway without funding",
+      "avoid": "free-first strategies, ad-based models, vanity metrics",
+      "length": "500 words",
+      "backreferences": "Product Scope, Simplicity, and Technical Leverage"
+    },
+    {
+      "chapter_title": "Distribution, Marketing, and Trust Building",
+      "chapter_summary": "Breaks down why distribution is the real bottleneck in micro SaaS and how credibility, trust, and narrow channels outperform scale tactics.",
+      "include": "founder-led sales, content as proof of competence, niche communities, SEO patience, outbound realism",
+      "avoid": "growth hacks, viral fantasies, generic social media posting",
+      "length": "500 words",
+      "backreferences": "Pricing, Revenue Models, and Cash Discipline"
+    },
+    {
+      "chapter_title": "Operations, Longevity, and When to Quit",
+      "chapter_summary": "Explores the long-term reality of running micro SaaS, including maintenance, customer support, opportunity cost, and rational shutdown decisions.",
+      "include": "support load management, churn diagnosis, compounding improvements, kill criteria, portfolio thinking",
+      "avoid": "founder burnout glorification, sunk-cost fallacy, emotional attachment to ideas",
+      "length": "500 words",
+      "backreferences": "Distribution, Marketing, and Trust Building"
+    }
+  ],
+  "system_prompt": "You are to generate and respond only with a coherent podcast narrator transcript only and nothing else. The transcript shall contain no tags, titles, code, sound effects or other annotations as what is written is exactly what will be read. You are to write no code, markdown or other otherwise non suitable formats for speech synthesis. You will be provided with generation guidelines which you must strictly adhear to at all times. When writing chapters keep in mind that chapters must feel as naturally flowing components in the transcript as a whole meaning you should never say welcome back to the listener or anything that might otherwise indicate a standalone block. RESPOND ONLY WITH COHERENT PODCAST TRANSCRIPT, EVERYTHING YOU WRITE WILL BE READ OUT LOUD TO A LIVE AUDIENCE"
 }
