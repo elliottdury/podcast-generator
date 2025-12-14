@@ -41,7 +41,7 @@ class ScriptBuilder:
             self.generate: Callable[[list[ChatMessage]], str] = self._openrouter_generate
 
     def compose(self):
-        # create the directory for all the output files
+
         base_dir = Path(__file__).resolve().parents[1]
         project_dir = base_dir / self.output_dir_name
         project_dir.mkdir(parents=True, exist_ok=True)
@@ -49,7 +49,7 @@ class ScriptBuilder:
         # super lazy approach but just for poc
         script = []
         for index, chapter in enumerate(self.generation_config.chapters):
-            # generate text for each chapter
+
             print(f"Writing chapter: {index+1} of {len(self.generation_config.chapters)}")
             chapter_generation_response = self.generate(
                 [ChatMessage(
@@ -70,7 +70,6 @@ class ScriptBuilder:
 
         complete_script = "\n\n".join(script)
 
-        # now write completed script to the newly created output directory
         with open(project_dir / "script.txt", "w") as script_output:
             script_output.write(complete_script)
         
@@ -101,8 +100,6 @@ class ScriptBuilder:
 
         ollama_config: OllamaConfig = self.model_provider_config
 
-        # todo: initialize the client here incase ollama is on a different port than usual
-
         response: ChatResponse = chat(
             model=ollama_config.model_id,
             messages=messages
@@ -115,4 +112,3 @@ class ScriptBuilder:
 # todo: add error handling
 # todo: improve how outputs are saved
 # todo: make async requests for faster script generation
-# todo: make the model aware of what chapter it is at

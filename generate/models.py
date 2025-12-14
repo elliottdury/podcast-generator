@@ -14,7 +14,7 @@ class PodcastChapter(BaseModel):
     include: str
     avoid: str
     length: str
-    backreferences: str
+    backreferences: list[str]
 
 class PodcastConfig(BaseModel):
     model_config = ConfigDict(extra='allow')
