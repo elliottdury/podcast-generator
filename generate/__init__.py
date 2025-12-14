@@ -1,7 +1,5 @@
 import os
 from dotenv import load_dotenv
-from .script import read_config, generate_script_openrouter, generate_script_ollama  # noqa: F401
-from .voice import generate_audio_elevenlabs, generate_audio_kokoro  # noqa: F401
 
 load_dotenv()
 

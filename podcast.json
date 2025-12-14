@@ -1,10 +1,167 @@
 {
-    "plot": {
-    "topic": ["How diffusion works in ai image generation, a complete overview of the various models and techniques."],
-    "anatomy": "lesson overview -> context and mental model for analogies -> main concepts -> concept relations -> pros and cons -> summarize -> real world application",
+  "project_title": "micro-saas",
+  "plot": {
+    "topic": "Everything you should know about building and running a micro SaaS",
     "tone": "professional",
-    "level": "beginner->expert",
-    "max_length": "200 words"
+    "level": "expert"
+  },
+  "chapters": [
+    {
+      "chapter_title": "What Micro SaaS Actually Is (and Is Not)",
+      "chapter_summary": "Defines micro SaaS as a capital-efficient, narrowly scoped software business optimized for profitability, control, and sustainability rather than venture-scale growth.",
+      "include": "bootstrapping vs venture scale, founder leverage, small teams or solo founders, revenue ceilings, control vs speed tradeoffs",
+      "avoid": "romanticized indie hacking, overnight success myths, vague entrepreneurship slogans",
+      "length": "2000 words",
+      "backreferences": [],
+      "current_chapter_index_(1_indexed)": "1"
     },
-    "system_prompt": "You are to generate and respond only with a coherent podcast narrator transcript on a given subject only and nothing else. The transcript shall contain no tags, titles, code, sound effects or other annotations as what is written is exactly what will be read."
+    {
+      "chapter_title": "Founder Reality and Strategic Constraints",
+      "chapter_summary": "Examines how time, energy, skill asymmetry, and opportunity cost shape viable micro SaaS strategies.",
+      "include": "solo-founder constraints, leverage per hour, founder-market fit, personal risk tolerance, lifestyle vs ambition tension",
+      "avoid": "infinite hustle assumptions, copying VC-backed playbooks",
+      "length": "2000 words",
+      "backreferences": [
+        "What Micro SaaS Actually Is (and Is Not)",
+        "founder leverage",
+        "revenue ceilings"
+      ],
+      "current_chapter_index_(1_indexed)": "2"
+    },
+    {
+      "chapter_title": "Problem Selection and Market Sharpness",
+      "chapter_summary": "Explains why micro SaaS success depends on choosing painful, recurring, narrowly defined problems with identifiable buyers.",
+      "include": "jobs-to-be-done, willingness to pay, niche B2B markets, frequency vs severity of pain",
+      "avoid": "broad consumer ideas, TAM obsession, idea-first thinking",
+      "length": "2000 words",
+      "backreferences": [
+        "What Micro SaaS Actually Is (and Is Not)",
+        "Founder Reality and Strategic Constraints"
+      ],
+      "current_chapter_index_(1_indexed)": "3"
+    },
+    {
+      "chapter_title": "Customer Discovery Without Lying to Yourself",
+      "chapter_summary": "Covers how to validate demand honestly, avoiding confirmation bias and fake signals.",
+      "include": "problem interviews, pre-selling, demand proxies, rejection signals, explicit vs implicit feedback",
+      "avoid": "survey theater, vanity waitlists, friends-and-family validation",
+      "length": "2000 words",
+      "backreferences": [
+        "Problem Selection and Market Sharpness",
+        "jobs-to-be-done",
+        "willingness to pay"
+      ],
+      "current_chapter_index_(1_indexed)": "4"
+    },
+    {
+      "chapter_title": "Product Scope, Simplicity, and Technical Leverage",
+      "chapter_summary": "Details how successful micro SaaS products constrain scope while maximizing leverage through automation, integrations, and boring technology.",
+      "include": "single-core feature focus, API-first thinking, build vs buy, maintenance cost awareness",
+      "avoid": "overengineering, premature scalability, novelty-driven stacks",
+      "length": "2000 words",
+      "backreferences": [
+        "Problem Selection and Market Sharpness",
+        "Founder Reality and Strategic Constraints"
+      ],
+      "current_chapter_index_(1_indexed)": "5"
+    },
+    {
+      "chapter_title": "Architecture for Longevity, Not Bragging Rights",
+      "chapter_summary": "Explains technical choices that reduce cognitive load, failure modes, and long-term maintenance risk.",
+      "include": "monolith bias, managed services, dependency minimization, failure containment, operational simplicity",
+      "avoid": "distributed systems cosplay, custom infrastructure, resume-driven design",
+      "length": "2000 words",
+      "backreferences": [
+        "Product Scope, Simplicity, and Technical Leverage",
+        "maintenance cost awareness"
+      ],
+      "current_chapter_index_(1_indexed)": "6"
+    },
+    {
+      "chapter_title": "Pricing, Revenue Models, and Cash Discipline",
+      "chapter_summary": "Analyzes pricing as the dominant growth lever in micro SaaS and why early monetization beats user growth.",
+      "include": "value-based pricing, simple subscriptions, annual plans, churn math, break-even thinking",
+      "avoid": "free-first strategies, ad-based models, vanity metrics",
+      "length": "2000 words",
+      "backreferences": [
+        "Product Scope, Simplicity, and Technical Leverage",
+        "Customer Discovery Without Lying to Yourself"
+      ],
+      "current_chapter_index_(1_indexed)": "7"
+    },
+    {
+      "chapter_title": "Unit Economics and Survival Math",
+      "chapter_summary": "Breaks down the economic reality of micro SaaS, focusing on margins, churn, and time-to-profitability.",
+      "include": "LTV/CAC realism, gross margin awareness, support cost per customer, pricing floor logic",
+      "avoid": "spreadsheet fantasy, hockey-stick projections",
+      "length": "2000 words",
+      "backreferences": [
+        "Pricing, Revenue Models, and Cash Discipline",
+        "Founder Reality and Strategic Constraints"
+      ],
+      "current_chapter_index_(1_indexed)": "8"
+    },
+    {
+      "chapter_title": "Distribution, Marketing, and Trust Building",
+      "chapter_summary": "Explains why distribution is the real bottleneck and how credibility compounds faster than reach.",
+      "include": "founder-led sales, authority-building content, niche communities, SEO patience, targeted outbound",
+      "avoid": "growth hacks, viral fantasies, generic social posting",
+      "length": "2000 words",
+      "backreferences": [
+        "Pricing, Revenue Models, and Cash Discipline",
+        "Customer Discovery Without Lying to Yourself"
+      ],
+      "current_chapter_index_(1_indexed)": "9"
+    },
+    {
+      "chapter_title": "Sales as a System, Not a Personality Trait",
+      "chapter_summary": "Reframes sales as a learnable, repeatable process critical to micro SaaS survival.",
+      "include": "qualification, objection handling, demos, closing mechanics, expectation setting",
+      "avoid": "introversion excuses, manipulative tactics",
+      "length": "2000 words",
+      "backreferences": [
+        "Distribution, Marketing, and Trust Building",
+        "Problem Selection and Market Sharpness"
+      ],
+      "current_chapter_index_(1_indexed)": "10"
+    },
+    {
+      "chapter_title": "Operations, Support, and Hidden Time Sinks",
+      "chapter_summary": "Explores the operational reality of running micro SaaS and how support, bugs, and edge cases consume founder time.",
+      "include": "support triage, documentation leverage, automation, SLA realism",
+      "avoid": "hero support mentality, ignoring operational drag",
+      "length": "2000 words",
+      "backreferences": [
+        "Architecture for Longevity, Not Bragging Rights",
+        "Unit Economics and Survival Math"
+      ],
+      "current_chapter_index_(1_indexed)": "11"
+    },
+    {
+      "chapter_title": "Compounding Improvements and Plateau Management",
+      "chapter_summary": "Describes how micro SaaS grows through steady optimization rather than step-function breakthroughs.",
+      "include": "pricing iteration, conversion tuning, churn reduction, incremental UX improvements",
+      "avoid": "constant pivots, feature thrash",
+      "length": "2000 words",
+      "backreferences": [
+        "Pricing, Revenue Models, and Cash Discipline",
+        "Operations, Support, and Hidden Time Sinks"
+      ],
+      "current_chapter_index_(1_indexed)": "12"
+    },
+    {
+      "chapter_title": "Risk Management, Failure Modes, and When to Quit",
+      "chapter_summary": "Provides a rational framework for shutting down, selling, or pausing a micro SaaS without emotional distortion.",
+      "include": "kill criteria, opportunity cost analysis, shutdown checklists, asset reuse",
+      "avoid": "sunk-cost fallacy, identity attachment to products",
+      "length": "2000 words",
+      "backreferences": [
+        "Founder Reality and Strategic Constraints",
+        "Unit Economics and Survival Math",
+        "Compounding Improvements and Plateau Management"
+      ],
+      "current_chapter_index_(1_indexed)": "13"
+    }
+  ],
+  "system_prompt": "You are to generate and respond only with a coherent podcast narrator transcript only and nothing else. The transcript shall contain no tags, titles, code, sound effects or other annotations as what is written is exactly what will be read. You are to write no code, markdown or other otherwise non suitable formats for speech synthesis. You will be provided with generation guidelines which you must strictly adhear to at all times. When writing chapters keep in mind that chapters must feel as naturally flowing components in the transcript as a whole meaning you should never say welcome back to the listener or anything that might otherwise indicate a standalone block. RESPOND ONLY WITH COHERENT PODCAST TRANSCRIPT, EVERYTHING YOU WRITE WILL BE READ OUT LOUD TO A LIVE AUDIENCE"
 }
