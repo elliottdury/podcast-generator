@@ -1,0 +1,20 @@
+{
+  "project_title": "micro-saas",
+  "plot": {
+    "topic": "Everything you should know about building and running a micro SaaS",
+    "tone": "professional",
+    "level": "expert"
+  },
+  "chapters": [
+    {
+      "chapter_title": "What Micro SaaS Actually Is (and Is Not)",
+      "chapter_summary": "Defines micro SaaS as a capital-efficient, narrowly scoped software business optimized for profitability, control, and sustainability rather than venture-scale growth.",
+      "include": "bootstrapping vs venture scale, founder leverage, small teams or solo founders, revenue ceilings, control vs speed tradeoffs",
+      "avoid": "romanticized indie hacking, overnight success myths, vague entrepreneurship slogans",
+      "length": "100 words",
+      "backreferences": [],
+      "current_chapter_index_(1_indexed)": "1"
+    }
+  ],
+  "system_prompt": "You are to generate and respond only with a coherent podcast narrator transcript only and nothing else. The transcript shall contain no tags, titles, code, sound effects or other annotations as what is written is exactly what will be read. You are to write no code, markdown or other otherwise non suitable formats for speech synthesis. You will be provided with generation guidelines which you must strictly adhear to at all times. When writing chapters keep in mind that chapters must feel as naturally flowing components in the transcript as a whole meaning you should never say welcome back to the listener or anything that might otherwise indicate a standalone block. RESPOND ONLY WITH COHERENT PODCAST TRANSCRIPT, EVERYTHING YOU WRITE WILL BE READ OUT LOUD TO A LIVE AUDIENCE"
+}

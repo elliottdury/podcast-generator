@@ -1,4 +1,7 @@
 # Podcast generator
+## About
+Write about section
+
 ## Setup
 Clone the GitHub Repository.
 ```

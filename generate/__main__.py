@@ -5,20 +5,30 @@ from . import (
     OLLAMA_MODEL,  # noqa: F401
     OLLAMA_PORT,  # noqa: F401
 )
-from .script import ScriptBuilder, OpenRouterConfig
-from .voice import generate_audio_kokoro
+from .producer import PodcastProducer, OpenRouterConfig, VoiceOverConfigKokoro, RAGConfig
+from pathlib import Path
 
 def main():
-    provider_config = OpenRouterConfig(
+    language_model_provider_config = OpenRouterConfig(
+        base_url="https://openrouter.ai/api/v1",
         model_id="deepseek/deepseek-v3.2",
         api_key=OPENROUTER_API_KEY
     )
-    builder = ScriptBuilder(
-        generation_config_path="podcast.json",
-        model_provider_config=provider_config
+    tts_model_provider_config = VoiceOverConfigKokoro(
+        voice="af_heart"
     )
-    complete_script, project_dir = builder.compose()
-    generate_audio_kokoro(text=complete_script, audio_output=f"{project_dir}/micro_saas_podcast")
+    producer = PodcastProducer(
+        project_dir=Path(__file__).resolve().parent.parent / "saas-podcast",
+        language_model_provider_config=language_model_provider_config,
+        tts_model_provider_config=tts_model_provider_config,
+        rag_config=RAGConfig(n_results=2)
+    )
+    #print(producer.chroma_collection.query(query_texts=["pricing"], n_results=2))
+    #print(producer.ingest_reference_txts())
+    #producer.reset_project_chroma_collection()
+    producer.ingest_reference_txts()
+    script = producer.write_script()
+    producer.record_and_save(script)
 
 if __name__ == "__main__":
     main()

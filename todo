@@ -1,4 +1,1 @@
-Add milvus to docker compose or use milvus within the project folder
-Add projects as an abstraction (maybe use the output dir name as the project)
-Add functionality to let each chapter generation run pull context from milvus
-Create a fine tuned model to write better scripts and publish adapters to huggingface
+- Create a fine tuned model to write better scripts and publish adapters to huggingface

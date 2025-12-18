@@ -1,7 +1,25 @@
 name: 'Podcast generator'
+networks:
+  podcast-generator:
+    driver: bridge
 services:
   kokoro-tts:
     image: ghcr.io/remsky/kokoro-fastapi-cpu:latest
     container_name: kokoro-tts-fastapi-cpu
     ports:
       - "8880:8880"
+    networks:
+      - podcast-generator
+
+  chroma-db:
+    image: chromadb/chroma
+    container_name: chroma
+    volumes:
+      - ./chromadb:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/chroma
+    ports:
+      - 8000:8000
+    networks:
+      - podcast-generator
